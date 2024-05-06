@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Movie Watchlist Creator</title>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Find your film</h1>
+        </div>
+        <div class="hero-button">
+          <a href="/watchlist.html"
+            ><button class="watchlist-btn" id="watchlist-btn">
+              My Watchlist
+            </button></a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="search-bar">
+        <span class="search-icon"></span>
+        <input
+          type="text"
+          placeholder="Search for a movie"
+          aria-label="Search for a movie"
+          id="search-input"
+        />
+        <button type="submit" id="search-btn">Search</button>
+      </div>
+      <div class="start-img">
+        <img src="/assets/start exploring.jpg" alt="Start exploring" />
+      </div>
+      <div class="movie-list" id="movie-list"></div>
+    </main>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>
