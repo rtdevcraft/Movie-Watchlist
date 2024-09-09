@@ -83,7 +83,7 @@ async function getWatchListData() {
     const dataArray = await Promise.all(
       watchlist.map(async (movieId) => {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}&plot=full`
+          `https://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}&plot=full`
         );
         return await response.json();
       })

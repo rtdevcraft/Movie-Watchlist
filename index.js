@@ -39,7 +39,7 @@ function searchMovies(e) {
   startImgEl.style.display = "none";
   const searchInputValue = encodeURIComponent(searchInput.value);
   const updatedWatchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInputValue}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInputValue}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.Search) {
@@ -59,7 +59,7 @@ async function renderMovieList(data, watchlist) {
     try {
       for (const movie of data) {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`
+          `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=full`
         );
         const movieData = await response.json();
 
